@@ -15,7 +15,7 @@ input files should come from the test-files folder, so you do not have to worry 
 
 
 ## 1. Empirical Comparison
-
+![LCS runtime graph](https://github.com/nathanrileyk-a11y/LongestCommonSubsequence/blob/main/LCS-runtime-graph.png)
 
 ## Question 2. Recurrence Equation
 The recurrence has base cases of 
