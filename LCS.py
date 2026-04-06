@@ -11,7 +11,7 @@ class LongestCommonSubsequence:
         self.weights_dict = weights
     
 
-    def longestCommonSubsequence(self):
+    def compute(self):
         s = ""
         for i in range(self.n, -1, -1):
             for j in range(self.m, -1, -1):
@@ -30,17 +30,17 @@ class LongestCommonSubsequence:
                     s += self.A[i]
                     i +=1
                     j += 1
-                elif self.A[i,j] == self.A[i+1, j]: #can i go down 1 row and get same optimal value?
+                elif self.arr[i,j] == self.arr[i+1, j]: #can i go down 1 row and get same optimal value?
                     i +=1
                 else:
                     j +=1
                 #must do cases where they arent equal
             else:
-                if self.A[i,j] == self.A[i+1, j]:
+                if self.arr[i,j] == self.arr[i+1, j]:
                     i += 1
                 else:
                     j += 1
-        return (self.arr[0,0], s)
+        return (int(self.arr[0,0]), s)
     
     
                  

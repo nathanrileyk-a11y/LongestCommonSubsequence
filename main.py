@@ -2,11 +2,10 @@ import sys
 import LCS
 
 
-def main():
-    return 
+
 
 if __name__ == "__main__":
-    main()
+    
     testFile = "test-files/" + sys.argv[1]
     numLines = sum(1 for line in open(testFile))
     lastLine = numLines-1
@@ -23,7 +22,7 @@ if __name__ == "__main__":
 
             #weight values
             if(strippedLine[0].islower()):
-                weights[strippedLine[0]] = strippedLine[5: len(strippedLine)]
+                weights[strippedLine[0]] = int(strippedLine[5: len(strippedLine)])
 
             #strings for comparison
             else:
@@ -36,4 +35,6 @@ if __name__ == "__main__":
     print("string A: ", strA)
     print("string B: ", strB)
 
-    LCS.LongestCommonSubsequence(strA, strB, weights)
+    weight, common_subsequence = (LCS.LongestCommonSubsequence(strA, strB, weights).compute())
+    print(weight)
+    print(common_subsequence) 
