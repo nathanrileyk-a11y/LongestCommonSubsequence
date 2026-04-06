@@ -1,7 +1,8 @@
 import sys
 import LCS
+import time
 
-
+start = time.time() #used for testing runtime of test files
 
 
 if __name__ == "__main__":
@@ -31,10 +32,8 @@ if __name__ == "__main__":
                 else:
                     strB = strippedLine[4: len(strippedLine)]
 
-    print("weights: ", weights)
-    print("string A: ", strA)
-    print("string B: ", strB)
-
     weight, common_subsequence = (LCS.LongestCommonSubsequence(strA, strB, weights).compute())
     print(weight)
-    print(common_subsequence) 
+    print(common_subsequence)
+
+    end = time.time()
