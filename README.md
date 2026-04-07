@@ -11,6 +11,7 @@ Run input files with the following command:
 
 input files should come from the test-files folder, so you do not have to worry about the path to the file as it is handled in the code.
 
+To run the **Longest Common Subsequence graph** go into the LCS-runtime-graph.py file and select Run 'LCS-runtime-graph.py'
 ## Written Solutions
 
 
